@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "QUICKSAND";
+    src: url("./fonts/Quicksand-VariableFont_wght.ttf");
+}
+
+@layer components {
+    .appContainer {
+        @apply bg-fondo bg-fixed bg-cover bg-center font-quicksand min-h-screen
+    }
+    .button {
+        @apply bg-[#1D3013]/60 text-slate-50 px-4 py-2 uppercase rounded font-semibold tracking-widest my-8 hover:scale-110 transition
+    }
+    .input {
+        @apply rounded-xl py-3 px-5 text-lg text-slate-900 font-semibold tracking-wider focus:outline-none focus:border-[#1D3013]/50 border-4 w-full
+    }
+    .taskContainer {
+        @apply bg-[#1D3013]/60 z-0 w-[20rem] text-slate-50 p-4 rounded-xl shadow-md flex flex-col justify-between relative
+    }
+    .taskCompleted {
+        @apply line-through font-semibold text-xl tracking-widest
+    }
+    .taskIncompleted {
+        @apply font-semibold w-[20rem] text-xl tracking-widest
+    }
+    .taskIcon {
+        @apply cursor-pointer hover:scale-150 transition
+    }
+    .doneIcon {
+        @apply absolute top-2 right-5 text-5xl
+    }
+    .lineTask {
+        @apply max-w-[90vw] h-0.5 bg-slate-50 my-4
+    }
+    .iconBox {
+        @apply flex flex-row justify-end gap-4 text-2xl
+    }
+    .modalContainer {
+        @apply fixed z-10 w-[100vw] h-[100vh] top-0 left-0 bg-black/50 flex items-center justify-center p-10
+    }
+    .modalBox {
+        @apply bg-[#EFF1EE] relative rounded-xl p-5 shadow-black shadow-md
+    }
+    .modalTitleBox {
+        @apply flex items-center justify-between mb-5 pb-5
+    }
+    .modalTitle {
+        @apply font-semibold text-2xl
+    }
+    .modalDoneBox {
+        @apply absolute top-5 right-5 text-4xl text-[#1D3013]
+    }
+    .modalDone {
+        @apply cursor-pointer text-[#1D3013]/60
+    }
+    .tasksContainer {
+        @apply pb-28 px-8 flex flex-col justify-center items-center
+    }
+    .tasksBox {
+        @apply flex flex-col items-center
+    }
+    .tasksTitle {
+        @apply text-5xl font-semibold text-slate-700 py-10
+    }
+    .tasksLine {
+        @apply h-1 bg-[#1D3013]/60 w-[90vw] mb-14
+    }
+    .tasksMap {
+        @apply grid gap-4 md:grid-cols-2 lg:grid-cols-3
+    }
+    .tasksNoneTasks {
+        @apply text-4xl text-slate-50 font-semibold uppercase
+    }
+    .taskFormContainer {
+        @apply flex flex-col items-center justify-center
+    }
+    .taskFormBox {
+        @apply flex flex-col gap-6
+    }
+}
+body{
+    overflow: overlay;
+}
+
+body::-webkit-scrollbar{
+    width: 10px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #32412b;
+    border-radius: 50px;
+}
+
+body::-webkit-scrollbar-thumb:hover{
+    background-color: #1D3013;
+}
